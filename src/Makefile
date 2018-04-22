@@ -15,7 +15,7 @@
 #CXX = clang++
 
 EXE = ../build/main 
-SOURCES = main.cpp ImGuiColorTextEdit/TextEditor.cpp imgui_impl_sdl_gl3.cpp
+SOURCES = main.cpp TextEditor.cpp imgui_impl_sdl_gl3.cpp
 SOURCES += ../libs/imgui/imgui.cpp ../libs/imgui/imgui_demo.cpp ..libs/imgui/imgui_draw.cpp
 SOURCES += ../imgui/libs/gl3w/GL/gl3w.c
 OBJS = $(addsuffix .o, $(basename $(notdir $(SOURCES))))
@@ -53,7 +53,7 @@ endif
 
 %.o:%.cpp
 	$(CXX) $(CXXFLAGS) -c -std=c++14 -o $@ $<
-%.o:ImGuiColorTextEdit/%.cpp
+#%.o:ImGuiColorTextEdit/%.cpp
 	$(CXX) $(CXXFLAGS) -std=c++14 -c -o $@ $<
 
 %.o:../libs/imgui/%.cpp
