@@ -486,7 +486,7 @@ ImGui::ShowTestWindow();
  if (show_glitch_window)
         {
         	auto cpos = editor.GetCursorPosition();
-           ImGui::Begin("Text Editor Demo", nullptr, ImGuiWindowFlags_HorizontalScrollbar | ImGuiWindowFlags_MenuBar);
+           ImGui::Begin("plainGlitch", nullptr, ImGuiWindowFlags_HorizontalScrollbar | ImGuiWindowFlags_MenuBar);
 		ImGui::SetWindowSize(ImVec2(800, 600), ImGuiCond_FirstUseEver);
 	//----------------
 	 if (ImGui::BeginMenuBar())
