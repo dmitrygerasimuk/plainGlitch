@@ -1,4 +1,5 @@
-# proxygen for mac, 0.1
+# plainglitch, 0.1
 
-simple gui wrapper for ffmpeg for making proxies sith watermarks
+simple gui wrapper for ffmpeg for making glitch cuts and stuff like that
+
 
