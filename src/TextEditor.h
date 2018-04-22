@@ -174,6 +174,7 @@ public:
 
 	int GetTotalLines() const { return (int)mLines.size(); }
 	bool IsOverwrite() const { return mOverwrite; }
+	bool MadeChanges() const { return mTextChanged; }
 
 	void SetReadOnly(bool aValue);
 	bool IsReadOnly() const { return mReadOnly; }
@@ -205,9 +206,10 @@ public:
 	void Cut();
 	void Paste();
 	void Delete();
-
+void  NoMoreUndo();
 	bool CanUndo() const;
 	bool CanRedo() const;
+	bool HaveEdit() const;
 	void Undo(int aSteps = 1);
 	void Redo(int aSteps = 1);
 
