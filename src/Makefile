@@ -25,9 +25,9 @@ UNAME_S := $(shell uname -s)
 
 ifeq ($(UNAME_S), Linux) #LINUX
 	ECHO_MESSAGE = "Linux"
-	LIBS = -lGL -ldl `sdl2-config --libs`
+	LIBS = libnfd.a -lGL -ldl -lpthread `sdl2-config --libs` `pkg-config --libs gtk+-3.0`
 
-	CXXFLAGS = -I../libs/imgui -I../libs/imgui/libs/gl3w `sdl2-config --cflags`
+    CXXFLAGS = -I../libs/imgui -I../libs/imgui/libs/gl3w `sdl2-config --cflags` `pkg-config --cflags gtk+-3.0`
 	CXXFLAGS += -Wall -Wformat
 	CFLAGS = $(CXXFLAGS)
 endif

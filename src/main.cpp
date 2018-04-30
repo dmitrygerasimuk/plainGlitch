@@ -931,7 +931,7 @@ ImGui::Columns(1);
    }
    else 
    {
-thread t1(Logout);
+       std::thread t1(Logout);
  t1.detach();
 }
 
